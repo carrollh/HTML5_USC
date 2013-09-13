@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>CSCE 145: Algorithmic Design I</title>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="jquery-1.7.1.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("nav ul li ul li").click(function() {
+					$(".current").removeClass("current");
+					$(this).parent().parent().addClass("current");
+					
+				});
+                
+                /* This function clears out the existing content div, then replaces its contents with the syllabus pdf.
+                 * It then resizes and prettys it up a bit.*/
+				$("#syllabus").click(function() {
+            
+                    $("#content").empty();
+                    
+                    /* embeds a pdf into a new element, but it is broken in FireFox14 on Mac 
+                    var newObject = $(document.createElement("embed"));
+                    $(newObject).attr("id", "contentViewer");
+                    $(newObject).attr("src", "http://www.cse.sc.edu/~carrollh/CSCE145/files/syllabus.pdf");
+                    $(newObject).attr("height", "1000px");
+					$(newObject).attr("width", "880px");
+                    $(newObject).html("alt: <a href=\"http://www.cse.sc.edu/~carrollh/CSCE145/files/syllabus.pdf\">Syllabus</a>");
+                    */
+                    
+                    /* embeds an 'object' containing the pdf into the content div.  Less broken in FF14, but still not optimal. */
+                    var newObject = $(document.createElement("object"));
+                    $(newObject).attr("id", "contentViewer");
+                    $(newObject).attr("type", "application/pdf");
+                    $(newObject).attr("data", "http://www.cse.sc.edu/~carrollh/CSCE145/files/syllabus.pdf");
+                    $(newObject).attr("height", "1000px");
+					$(newObject).attr("width", "880px");
+                    $(newObject).html("alt: <a href=\"http://www.cse.sc.edu/~carrollh/CSCE145/files/syllabus.pdf\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Are you using FireFox on a Mac? It's currently bugged, but you can download the syllabus using this link.</a>");                    
+                    
+                    $("#content").css("overflow", "hidden");
+                    $("#content").animate({height: "900px", width: "800px"}, 200);
+                    $("#content").append($(newObject));
+                    
+                });
+			});
+		</script>
+        <!--[if lte IE 8]> 
+            <script src="html5.js" type="text/javascript"></script> 
+        <![endif]-->
+	</head>
+
+	<body>
+		<header>
+		<p>
+			<img style="margin-left: 1em;" src="./img/compsci.png" alt="CSE@USC" title="CSE@USC" />
+			<a href="http://www.oracle.com/us/technologies/java/overview/index.html?origref=http://www.oracle.com/index.html">
+				<img src="img/java.jpg" height="80" alt="Java SE 7" title="Java SE 7">
+			</a>
+			<a href="http://www.w3.org/html/logo/">
+				<img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="165" height="64" alt="HTML5 Powered with CSS3 / Styling, and Semantics" title="HTML5 Powered with CSS3 / Styling, and Semantics">
+			</a>
+			<a href="http://www.roguishexploits.com">
+				<img src="img/RoguishExploitsLogo.png" alt="Roguish Exploits, LLC" title="Roguish Exploits, LLC">
+			</a>
+			
+			
+		</p>
+		<nav>
+		<ul id="nav">
+			<li id="homeNav" class="current"><a href="./index.html">Home</a></li>
+			<li id="infoNav"><a href="#">Course Info</a>
+				<ul> 
+                    <!--[if IE]>
+                        <li><a id="syllabus" href="http://www.cse.sc.edu/~carrollh/CSCE145/files/syllabus.pdf">Syllabus</a></li>
+                    <![endif]-->
+                    <!--[if !IE]>-->
+					<li><a id="syllabus" href="#">Syllabus</a></li>
+                    <!--<![endif]-->
+					<li><a href="files/attendance.pdf">Attendance Policy</a></li>
+					<li><a href="http://www.cse.sc.edu/coeitAbusePolicy.html">Responsible Computer Use</a></li>
+				</ul>
+			</li>
+			
+			<li><a href="#">Homework</a>
+				<ul>
+					<li><a href="http://www.cse.sc.edu/~carrollh/CSCE145/Homework/hw01.pdf">Assignment 01 - 9/6/12 11:55PM</a></li>
+					<li><a href="./Homework/hw02.pdf">Assignment 02 - 09/13/12 11:55PM</a></li>
+					<li><a href="./Homework/hw03.pdf">Assignment 03 - 09/20/12 11:55PM</a></li>
+                  			<li><a href="./Homework/hw04.pdf">Assignment 04 - 09/27/12 11:55PM</a></li>
+					<li><a href="./Homework/hw05.pdf">Assignment 05 - 10/11/12 11:55PM</a></li>
+					<li><a href="./Homework/hw06.pdf">Assignment 06 - 10/18/12 11:55PM</a></li>
+					<li><a href="./Homework/hw07.pdf">Assignment 07 - 10/30/12 11:55PM</a></li>
+					<li><a href="http://cse.sc.edu/~huhns/csce145/Homework/prog8.html">Assignment 08 - 11/20/12 11:55PM</a></li>
+					<li><a href="http://cse.sc.edu/~huhns/csce145/Homework/prog9.html">Assignment 09 - 12/05/12 11:55PM</a></li>
+					<!--<li><a href="./Homework/hw10.pdf">Assignment 10</a></li>
+					<li><a href="./Homework/hw11.pdf">Assignment 11</a></li>
+					<li><a href="./Homework/hw12.pdf">Assignment 12</a></li>
+					<li><a href="./Homework/hw13.pdf">Assignment 13</a></li>
+					<li><a href="./Homework/hw14.pdf">Assignment 14</a></li> -->
+				</ul>
+			</li>
+            
+            <li><a href="#">Labs</a>
+				<ul>
+					<li><a href="https://codelab1.turingscraft.com:8443/codelab/jsp/login1.jsp?lang=english">CodeLab Website Access</a></li>
+					<li><a href="./Labs/lab01.html">Lab 01</a></li>
+                    			<li><a href="./Labs/lab02.pdf">Lab 02</a></li>
+					<li><a href="./Labs/lab03.pdf">Lab 03</a></li>
+                  			<li><a href="./Labs/lab04.pdf">Lab 04</a></li>
+                  			<li><a href="./Labs/lab05.pdf">Lab 05</a></li>
+					<li><a href="./Labs/lab06.pdf">Lab 06</a></li>
+					<li><a href="./Labs/lab07.pdf">Lab 07</a></li>
+					<li><a href="./Labs/lab08.pdf">Lab 08</a></li>
+                			<li><a href="./Labs/lab09.pdf">Lab 09</a></li>
+                			<li><a href="./Labs/lab10.pdf">Lab 10</a></li>
+                			<li><a href="./Labs/lab11.pdf">Lab 11</a></li>
+					<li><a href="./Labs/lab12.pdf">Lab 12</a></li>
+					<li><a href="./Labs/lab13.pdf">Lab 13</a></li>
+					<li><a href="./Labs/lab14.pdf">Lab 14</a></li>
+					<li><a href="./Labs/lab15.pdf">Lab 15</a></li>
+					<li><a href="./Labs/lab16.pdf">Lab 16</a></li>
+					<li><a href="./Labs/lab17.pdf">Lab 17</a></li>
+					<li><a href="http://cse.sc.edu/~huhns/csce145/Labs/lab18.html">Lab 18</a></li>
+					<li><a href="http://cse.sc.edu/~huhns/csce145/Labs/lab19.html">Lab 19</a></li>
+					<li><a href="http://cse.sc.edu/~huhns/csce145/Labs/lab20.html">Lab 20</a></li>
+                    <li><a href="http://cse.sc.edu/~huhns/csce145/Labs/lab21.html">Lab 21</a></li>
+					<li><a href="http://cse.sc.edu/~huhns/csce145/Labs/lab22.html">Lab 22</a></li>
+					<li><a href="http://cse.sc.edu/~huhns/csce145/Labs/lab23.html">Lab 23</a></li>
+				</ul>
+			</li>
+			<li><a href="">Lecture Notes</a>
+						<ul>
+							<li><a href="lectures/ppt01.pptx">08/27/12</a></li>
+                        <li><a href="lectures/ppt02.pptx">09/05/12</a></li>
+                        <li><a href="lectures/ppt03.pptx">09/12/12</a></li>
+                        <li><a href="lectures/ppt04.pptx">09/17/12</a></li>
+                    	<li><a href="lib/Email.java">Email Notes</a></li>
+ 			<li><a href="lectures/ppt05.pptx">09/24/12</a></li>
+            		<li><a href="files/Test1Fall2011_Key.pdf">09/26/12 - Dr. Huhns Practice Test</a></li>
+            		<li><a href="files/CSCE145-PracticeTest1.docx">09/26/12 - Another Practice Test</a></li>
+			<li><a href="files/Exercises.pdf">10/01/12 - Practice Exercises scanned.</a></li>
+			<li><a href="lectures/ppt06.pptx">10/03/12</a></li>
+			<li><a href="files/2012Fall-CSCE145-TEST1-KEY.pdf">10/08/12 - Test 1 Key</a></li>
+ 			<li><a href="lectures/ppt06.pptx">10/15/12</a></li>
+ 			<li><a href="lectures/ppt07.pptx">10/22/12</a></li>
+ 			<li><a href="lectures/ppt08.pptx">10/29/12</a></li>
+ 			<li><a href="lectures/ppt10.pptx">10/31/12</a></li>
+			<li><a href="http://www.cse.sc.edu/~huhns/csce145/Slides/Test2F2011Key.pdf">11/02/12 - Dr. Huhns Test From Last Fall"</a></li>
+			<li><a href="files/Notes11-19.txt">11/19/12 - ActionListener Notes</a></li>
+            <li><a href="files/csce145_mt2_KEY.docx">Test 2 KEY</a></li>
+		</ul>
+            </li>
+			<li><a href="#">Resources</a>
+              <ul>		
+					<li><a href="http://docs.oracle.com/javase/7/docs/api/">Java SE 7 API</a></li>
+					<li><a href="http://www.cse.sc.edu/~huhns/csce145/codeExamples.html">Examples</a></li>
+					<li><a href="http://www.cse.sc.edu/~huhns/csce145/installJava.html">How to Install Java</a></li>
+					<li><a href="http://www.cse.sc.edu/~huhns/csce145/installEclipse.html">How to Install Eclipse</a></li>
+					<li><a href="http://cec.sc.edu/its/vpn.html">How to Set Up Remote Access</a></li>
+					<li><a href="http://www.jblearning.com/catalog/9781449638610/">Textbook Website</a></li>
+					<li><a href="http://books.google.com/books?id=Ki2DMaeeHpUC&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false">ELECTRONIC COPY OF THE TEXTBOOK!</a></li>s
+                    <li><a href="http://www.youtube.com/playlist?list=PLF03C6B2C0B292A1E">VIDEOS!</a></li>
+				</ul>
+			</li>
+			
+			<li><a href="http://www.cse.sc.edu/~carrollh/CSCE145/contacts.html">Contacts</a>
+				<!--<ul>
+					<li><a href="#">Lecture Instructor</a>
+						<ul>
+							<li><a href="http://www.cse.sc.edu/~carrollh">Heath Carroll</a></li>
+							<li><span class="info">carrollh@email.sc.edu</span></li>
+							<li><span class="info">Office - SWGN 1D49</span></li>
+							<li><span class="info">Office Hours: TBD</span></li>
+							<li>&nbsp;</li>
+						</ul>
+					</li>
+					<li ><a href="#">Lab Instructors Section 5</a>
+						<ul>
+							<li><a href="http://www.cse.sc.edu/~zhou44">Lingxi Zhou</a></li>
+							<li><span class="info">zhou44@email.sc.edu</span></li>
+							<li><span class="info">Office - TBD</span></li>
+							<li><span class="info">Office Hours: TBD</span></li>
+							<li>&nbsp;</li>
+
+							<li><a href="http://www.cse.sc.edu/~cawthorn">Lewis Cawthorn</a></li>
+							<li><span class="info">cawthorn@email.sc.edu</span></li>
+							<li><span class="info">Office - TBD</span></li>
+							<li><span class="info">Office Hours: TBD</span></li>
+							<li>&nbsp;</li>
+
+						</ul>
+					</li>
+					<li><a href="#">Lab Instructors Section 6</a>
+						<ul>
+							<li><a href="http://www.cse.sc.edu/~nadipall">Jun Zhou</a></li>
+							<li><span class="info">zhou23@email.sc.edu</span></li>
+							<li><span class="info">Office - TBD</span></li>
+							<li><span class="info">Office Hours: TBD</span></li>
+							<li>&nbsp;</li>
+
+							<li><a href="http://www.cse.sc.edu/~zhou44">Lingxi Zhou</a></li>
+							<li><span class="info">TBD</span></li>
+							<li><span class="info">Office - TBD</span></li>
+							<li><span class="info">Office Hours: TBD</span></li>
+							<li>&nbsp;</li>
+						</ul>
+					</li>
+					<li><a href="#">Lab Instructors Section 7</a>
+						<ul>
+							<li><a href="http://www.cse.sc.edu/~cawthorn">Lewis Cawthorn</a></li>
+							<li><span class="info">TBD</span></li>
+							<li><span class="info">Office - TBD</span></li>
+							<li><span class="info">Office Hours: TBD</span></li>
+							<li>&nbsp;</li>
+
+							<li><a href="http://www.cse.sc.edu/~nadipall">Jun Zhou</a></li>
+							<li><span class="info">TBD</span></li>
+							<li><span class="info">Office - TBD</span></li>
+							<li><span class="info">Office Hours: TBD</span></li>
+							<li>&nbsp;</li>
+						</ul>
+					</li>
+				</ul>-->
+			</li>
+		</ul>
+		</nav>
+		</header>
+		<div  id="content" style="overflow: hidden; height:950px;">
+			<div id="classMeetings" style="border-bottom: 3px solid #8e001c;">
+				<h3 style="margin-left: 25px;"> Lecture Meeting Times: M/W 5:30p-6:20p, Swearingin 1C01 (Amoco Hall) </h3>
+				<h3 style="margin-left: 25px;"> Lab meeting times vary by section. </h3>
+			</div>
+			<h1 style="margin: 25px;"> Announcements</h1>
+			<table id="announcements">
+                <tr><th colspan="2"><marquee> FINAL EXAM: WEDNESDAY, DEC 12th, 4PM </marquee></th></tr>
+				<tr>
+					<th style="width: 50px;">Date</th><th style="width: 450px;">Message</th>
+				</tr>
+				<tr>
+                    <tr>
+                        <td>12-10</td><td style="border-bottom: 1px solid black;"> I've posted the Test 2 KEY in the lecture notes section. Also I've decided against any Extra credit assignments. Instead I will be applying a curve to the Test 1 grades. They were just too complex for any but the best students, who don't need them.'
+                        </td>
+                    </tr>
+                    
+                    <tr>
+					<td>12-03</td><td style="border-bottom: 1px solid black;"> REGISTRATION FOR CSCE 146 is rather full. Go here <a href="http://www.cse.sc.edu/~matthews/MyGoogleDocs/WL.html">http://www.cse.sc.edu/~matthews/MyGoogleDocs/WL.html</a> to register if you would like to take CSCE 146 next semester! <br/> Also, the FINAL EXAM is next week on Wednesday, December 12th at 4pm.
+                    			</td>
+                		</tr>
+
+				<tr>
+					<td>11-30</td><td style="border-bottom: 1px solid black;">Here are some links to look at for the <a href="http://javarevisited.blogspot.com/2011/03/10-interview-questions-on-singleton.html">Singleton Pattern</a>, the <a href="http://javarevisited.blogspot.com/2011/12/factory-design-pattern-java-example.html">Factory Pattern</a>, and the <a href="http://www.austintek.com/mvc/">Model-View-Controller(MVC) Pattern</a>. Also notice the "Extra" button in the navbar above.  Those will be placed online as I complete the write ups for them. They will "all or nothing" assignments; meaning that there will not be partial credit given for them. So only attempt them after you have completed your other assignments. There will be Dropbox folders for them shortly.
+                        I have extended HW 9 to Monday, and placed HW 10 online, due on the last night of class. Focus on those. Then if you have time look at the Extra assignments.
+                    </td>
+                </tr>
+				
+                <tr>
+					<td>11-19</td><td style="border-bottom: 1px solid black;">Class cancelled today. Please look at the Lecture Notes for help on Homework 8. I give 3 variants on using ActionListeners, and at the end I show you how to know what object called an event. I've also put a demo of what the result of hw 8 could look like if you wanted to go a bit beyond the requirements <a href="files/Demo_bin.zip">here</a> (just run it from command line with 'java Main' from inside the Demo_bin folder). I recommend keeping the path your user takes through the grid in an ArrayList. In the demo I also created an ArrayList to store the neighbors of the last cell clicked on so that you can tell if the next chosen cell is adjacent to the last one.
+				</tr>
+				<tr>
+					<td>10-11</td><td style="border-bottom: 1px solid black;">Youtube videos can be found here:<br />
+					<a href="http://www.youtube.com/watch?v=MUJzdISG15U&feature=plcp">UML Basics</a>
+					<a href="http://www.youtube.com/watch?v=2edHgdpO_Ag&feature=plcp">Keyword Static</a>
+					<a href="http://www.youtube.com/watch?v=Dtz7o1fVszM&feature=plcp">Arrays</a></td>
+				</tr>
+				<tr>
+					<td>10-09</td><td style="border-bottom: 1px solid black;">The key for test 1 has been posted in the lecture notes for yesterday's class. If you find that your answer matches the key please point this out to one of your TAs or to me.</td>
+				</tr>
+				<tr>
+					<td>10-08</td><td style="border-bottom: 1px solid black;">No class on Wednesday October 10th. My wife is having surgery that morning and I will be taking care of her afterward. I will put together some videos for you covering some select topics from chapters 5 and 6. Look here for them by Friday (hopefully).</td>
+				</tr>
+                <tr>
+					<td>09-24</td><td style="border-bottom: 1px solid black;">Executive decision: I have changed the requirements of HW 4. Emailing yourself (or at least putting the correct code in your program to do so) is now worth 10 points of extra credit. For full functionality it would require you to set up an sftp server, and that is beyond the scope of this class. If you've finished that part already but it won't compile, just comment it out and submit it as is.</td>
+				</tr>
+                <tr>
+					<td>09-21</td><td style="border-bottom: 1px solid black;">Test 1 will cover chapters 1-5 and will be on October 1st. The plan is to have it graded before class on the 3rd so that you can decide whether or not you wish to continue on in CSCE 145. Obviously I would like you all to succeed in this class. To help with that I have posted a ton of practice questions on the CodeLab website that came with your text. To access them you will need to go to http://jblearning.turingscraft.com/codelab/jsp/jblearning/login.jsp and register for a new account.  The course access code is SOUCAR-6160-0 and the SectionNNN is 35403. Please let me know if you have problems accessing the site. The questions are not part of your grade. They are just a study aid. If you did not purchase the book, but you would still like access to the CodeLab materials please send me an email and I will direct you to the right place.</td>
+				</tr>
+                <tr>
+					<td>09-05</td><td style="border-bottom: 1px solid black;">Look at http://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html for next class. Pay particular attention to the number of bits each primitive data type uses. We will be talking about memory, the heap, and more about what happens when you initialize a variable.</td>
+				</tr>
+                <tr>
+					<td>08-29</td><td style="border-bottom: 1px solid black;">The syllabus has been updated to reflect Mr. Bellotti's contact informations. The website has also been updated with the correct syllabus, and the contacts link above has been fixed.  Homework 1 has been assigned and it is due by 11:55pm on Thursday Sept 6th. Also Dr. Vidal's YouTube channel has been added to the Resources section!</td>
+				</tr>
+				<tr>
+					<td>08-27</td><td>Welcome to CSCE 145!<br />I look forward to helping you learn your first high level programming language, Java!<br />Please use the navigation menu above to find all of the course resources.</td>
+				</tr>
+				
+			</table>
+				
+			
+		</div>
+	</body>
+</html>

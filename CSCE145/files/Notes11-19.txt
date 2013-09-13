@@ -1,0 +1,64 @@
+Overview of event handling:
+
+1. Create an object that will need to listen (i.e. a JButton object). As long as the class has the addActionListener(ActionListener al) method, you should be good.
+
+2. Register a listener with that object:
+	a. Create an instance of a listening class (an object from a class implementing ActionListener)
+	b. add it as a listener to the original object with its
+ 	   addActionListener(ActionListener al) method.
+
+3. Define the actions you want performed when the event is triggered (i.e. a JButton is clicked).
+
+
+There are three basic ways to do this:
+Example 1) As long as you define the actionPerformed(ActionEvent e) method inside your SomeListener class the following will display "Button clicked!" in the console when the button is clicked.
+
+	JButton button = new JButton("click me");
+	SomeListener listener = new SomeListener();
+	button.addActionListener(listener);
+
+	// inside the SomeListener class definition: 
+	public void actionPerformed(ActionEvent e) {
+		System.out.println("Button clicked!");
+	}
+
+ 
+Example 2) The first example is annoying because you define the actions a JButton will trigger in a different class. A better method would be to include them in the same class definition.
+
+ 	JButton button = new JButton("click me");
+	button.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+			buttonAction();
+		}
+	});
+
+	//elsewhere in the same class…
+	private void buttonAction() {
+		System.out.println("Button clicked!");
+	}
+
+
+Example 3) The second example above is really handy if you have many listeners that need to perform the same actions, but if you only need one or two commands be performed, then the following will suffice:
+
+	JButton button = new JButton("click me");
+	button.addActionListener(new ActionListener() {
+		public void actionPerfromed(ActionEvent e) {
+			System.out.println("Button clicked!");
+		}
+	});
+
+
+If you need to do something different for each button like object, use examples 2 or 3 above. 
+
+If there are a lot of buttons needing to do the same thing, but also need to know which button triggered the actions, you can pass the caller to the action method with the getSource() method:
+
+Example 4) Results in "click me was clicked!" being displayed.
+	 
+	JButton button = new JButton("click me");
+	button.addActionListener(new ActionListener() {
+		public void actionPerfromed(ActionEvent e) {
+			JButton caller = e.getSource();
+			System.out.println(caller.getText() + " was clicked!");
+		}
+	});
+

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>CSCE 145: Algorithmic Design I</title>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="jquery-1.7.1.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("nav ul li ul li").click(function() {
+					$(".current").removeClass("current");
+					$(this).parent().parent().addClass("current");
+					
+				});
+                
+                /* This function clears out the existing content div, then replaces its contents with the syllabus pdf.
+                 * It then resizes and prettys it up a bit.*/
+				$("#syllabus").click(function() {
+            
+                    $("#content").empty();
+                    
+                    /* embeds a pdf into a new element, but it is broken in FireFox14 on Mac 
+                    var newObject = $(document.createElement("embed"));
+                    $(newObject).attr("id", "contentViewer");
+                    $(newObject).attr("src", "http://www.cse.sc.edu/~carrollh/CSCE145/files/syllabus.pdf");
+                    $(newObject).attr("height", "1000px");
+					$(newObject).attr("width", "880px");
+                    $(newObject).html("alt: <a href=\"http://www.cse.sc.edu/~carrollh/CSCE145/files/syllabus.pdf\">Syllabus</a>");
+                    */
+                    
+                    /* embeds an 'object' containing the pdf into the content div.  Less broken in FF14, but still not optimal. */
+                    var newObject = $(document.createElement("object"));
+                    $(newObject).attr("id", "contentViewer");
+                    $(newObject).attr("type", "application/pdf");
+                    $(newObject).attr("data", "http://www.cse.sc.edu/~carrollh/CSCE145/files/syllabus.pdf");
+                    $(newObject).attr("height", "1000px");
+					$(newObject).attr("width", "880px");
+                    $(newObject).html("alt: <a href=\"http://www.cse.sc.edu/~carrollh/CSCE145/files/syllabus.pdf\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Are you using FireFox on a Mac? It's currently bugged, but you can download the syllabus using this link.</a>");                    
+                    
+                    $("#content").css("overflow", "hidden");
+                    $("#content").animate({height: "900px", width: "800px"}, 200);
+                    $("#content").append($(newObject));
+                    
+                });
+			});
+		</script>
+	</head>
+
+	<body>
+		<header>
+		<p>
+			<img style="margin-left: 1em;" src="./img/compsci.png" alt="CSE@USC" title="CSE@USC" />
+			<a href="http://www.oracle.com/us/technologies/java/overview/index.html?origref=http://www.oracle.com/index.html">
+				<img src="img/java.jpg" height="80" alt="Java SE 7" title="Java SE 7">
+			</a>
+			<a href="http://www.w3.org/html/logo/">
+				<img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="165" height="64" alt="HTML5 Powered with CSS3 / Styling, and Semantics" title="HTML5 Powered with CSS3 / Styling, and Semantics">
+			</a>
+			<a href="http://www.roguishexploits.com">
+				<img src="img/RoguishExploitsLogo.png" alt="Roguish Exploits, LLC" title="Roguish Exploits, LLC">
+			</a>
+			
+			
+		</p>
+		<nav>
+		<ul id="nav">
+			<li id="homeNav"><a href="./index.html">Home</a></li>
+			<li id="infoNav"><a href="#">Course Info</a>
+				<ul> 
+					<li><a id="syllabus" href="#">Syllabus</a></li>
+					<li><a href="./attendance.pdf">Attendance Policy</a></li>
+					<li><a href="http://www.cse.sc.edu/coeitAbusePolicy.html">Responsible Computer Use</a></li>
+				</ul>
+			</li>
+			
+			<li><a href="#">Homework</a>
+				<ul>
+					<li><a href="http://www.cse.sc.edu/~carrollh/CSCE145/Homework/hw01.pdf">Assignment 1</a></li>
+					<!--<li><a href="./homework/hw02.pdf">Assignment 2</a></li>
+					<li><a href="./homework/hw03.pdf">Assignment 3</a></li>
+					<li><a href="./homework/hw04.pdf">Assignment 4</a></li>
+					<li><a href="./homework/hw05.pdf">Assignment 5</a></li>
+					<li><a href="./homework/hw06.pdf">Assignment 6</a></li>
+					<li><a href="./homework/hw07.pdf">Assignment 7</a></li>
+					<li><a href="./homework/hw08.pdf">Assignment 8</a></li>
+					<li><a href="./homework/hw09.pdf">Assignment 9</a></li>
+					<li><a href="./homework/hw10.pdf">Assignment 10</a></li>
+					<li><a href="./homework/hw11.pdf">Assignment 11</a></li>
+					<li><a href="./homework/hw12.pdf">Assignment 12</a></li>
+					<li><a href="./homework/hw13.pdf">Assignment 13</a></li>
+					<li><a href="./homework/hw14.pdf">Assignment 14</a></li> -->
+				</ul>
+			</li>
+			
+			<li><a href="#">Labs</a>
+				<ul>
+					<li><a href="http://jblearning.turingscraft.com/codelab/jsp/jblearning/login.jsp">CodeLab Website Access</a></li>
+					<li><a href="./Labs/lab01.html">Lab 01</a></li>
+                    <li><a href="./Labs/lab02.pdf">Lab 02</a></li>
+					<li><a href="./Labs/lab03.pdf">Lab 03</a></li>
+					<li><a href="./Labs/lab04.pdf">Lab 04</a></li>
+					<!--<li><a href="./Labs/lab05.pdf">Lab 05</a></li>
+					<li><a href="./Labs/lab06.pdf">Lab 06</a></li>
+					<li><a href="./Labs/lab07.pdf">Lab 07</a></li>
+					<li><a href="./Labs/lab08.pdf">Lab 08</a></li>
+					<li><a href="./Labs/lab09.pdf">Lab 09</a></li>
+					<li><a href="./Labs/lab10.pdf">Lab 10</a></li>-->
+				</ul>
+			</li>
+			
+			<li><a href="#">Resources</a>
+				<ul>		
+					<li><a href="">Lecture Notes</a>
+						<ul>
+							<li><a href="#">08-27-2012</a></li>
+							<!--
+							<li><a href="#"></a></li>
+							-->
+						</ul>
+                    </li>
+					<li><a href="http://docs.oracle.com/javase/7/docs/api/">Java SE 7 API</a></li>
+					<li><a href="http://www.cse.sc.edu/~huhns/csce145/codeExamples.html">Examples</a></li>
+					<li><a href="http://www.cse.sc.edu/~huhns/csce145/installJava.html">How to Install Java</a></li>
+					<li><a href="http://www.cse.sc.edu/~huhns/csce145/installEclipse.html">How to Install Eclipse</a></li>
+					<li><a href="http://cec.sc.edu/its/vpn.html">How to Set Up Remote Access</a></li>
+					<li><a href="http://www.jblearning.com/catalog/9781449638610/">Textbook Website</a></li>
+				</ul>
+			</li>
+			
+			<li id="contactNav"  class="current"><a href="./contacts.html">Contacts</a>
+			</li>
+		</ul>
+		</nav>
+		</header>
+		<div  id="content" style="overflow: hidden; height: 565px; width: 330px;">
+			<h1 style="text-align: center"> Contacts </h1>
+            <ul>
+					<li> <a href="#">Lecture Instructor</a>
+						<ul style="list-style-type: none;">
+							<li><a href="http://www.cse.sc.edu/~carrollh">Heath Carroll</a></li>
+							<li><span class="info">carrollh@email.sc.edu</span></li>
+							<li><span class="info">Office - SWGN 1D49</span></li>
+							<li><span class="info">Office Hours: MW 3:30PM-5:30PM</span></li>
+						</ul>
+					</li>
+					<li> <a href="#">Supplimental Instruction Leader</a>
+						<ul style="list-style-type: none;">
+							<li><a href="http://www.sa.sc.edu/supplementalinstruction/">Amadeo Bellotti</a></li>
+							<li><span class="info">bellotta@email.sc.edu</span></li>
+							<li><span class="info">SI Meeting Location: HU 301</span></li>
+							<li><span class="info">SI Meeting Times:
+                                <div style="margin: 0 50px;">Monday-7pm</div>
+                                <div style="margin: 0 50px;">Wednesday-8pm</div>
+                                <span style="margin: 0 50px;">Thursday-9pm</span>
+                                </span>
+                            </li>
+						</ul>
+					</li>
+                    <li ><a href="#">Lab Instructors</a>
+						<ul style="list-style-type: none;">
+							<li><a href="http://www.cse.sc.edu/~zhou44">Lingxi Zhou (sections 5 and 6)</a></li>
+							<li><span class="info">zhou44@email.sc.edu</span></li>
+							<li><span class="info">Office - TBD</span></li>
+							<li><span class="info">Office Hours: TBD</span></li>
+
+							<li><a href="http://www.cse.sc.edu/~cawthorn">Lewis Cawthorn (sections 5 and 7)</a></li>
+							<li><span class="info">cawthorn@email.sc.edu</span></li>
+							<li><span class="info">Office - TBD</span></li>
+							<li><span class="info">Office Hours: TBD</span></li>
+
+                            <li><a href="http://www.cse.sc.edu/~nadipall">Jun Zhou (sections 6 and 7)</a></li>
+							<li><span class="info">zhou23@email.sc.edu</span></li>
+							<li><span class="info">Office - TBD</span></li>
+							<li><span class="info">Office Hours: TBD</span></li>
+						</ul>
+					</li>
+				</ul>
+		</div>
+	</body>
+</html>
