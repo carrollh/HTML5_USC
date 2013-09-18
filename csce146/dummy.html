@@ -33,10 +33,11 @@ greatest product of four consecutive numbers in any direction (up,
 down, left, right, or diagonal) in the 20x20
 matrix or grid of numbers. 
 </P>
-<P><U><B>Input:<BR></B></U>Since the concept of file I/O has not been
-introduced yet, all data can be obtained by the way of the standare
+<P><U><B>Input:<BR></B></U><strike>Since the concept of file I/O has not been
+introduced yet,</strike> All data can be obtained by the way of the standare
 input (keyboard) prompt in an interactive fashion. You can then feed
-the data to your program from a file by using file redirection. The
+the data to your program from a file by using <strike>file redirection</strike> 
+a command line argument consisting of the input file name. The
 input file will contain the matrix of numbers. The data will be
 presented from the top left of the table to bottom right.</P>
 <P><U><B>Output:</B></U></P>
@@ -52,17 +53,22 @@ product of the four.
 	standard programming practices and should not use any global
 	variables</P>
 	<LI><P STYLE="margin-bottom: 0in">Your program should contain at
-	least three static methods. One for accepting the data from
-	keyboard, one for printing the final results to console and one
+	least <strike>three</strike> TWO static methods. <strike>One for accepting the data from
+	keyboard,</strike> one for printing the final results to console and one
 	other function that is used during your calculations</P>
-	<LI><P>Your program must be prepared to work for an nx20 matrix of
-	data. The value of n needs to be passed to the program via the
-	<A HREF="../examples/commandline.txt">command line argument</A>.
+	<LI><P>Your program must be prepared to work for <strike>an nx20</strike> a 20x20 matrix of
+	data. <strike>The value of n needs to be passed to the program via the
+	<A HREF="../examples/commandline.txt">command line argument</strike></A>.
 	The example below is for a 20x20 matrix and the command line
-	argument would consist of &quot;a.out 20&quot;.</P>
+	argument would consist of <strike>&quot;a.out 20&quot;</strike> &nbsp;&nbsp;&quot;java ProgramName ex4.txt&quot;.
+	Inside your program you can then refer to the passed in argument as &quot;args[0]&quot;.</P>
+	<li><p style="margin-bottom: 0in">Since this project is intending for you to use the command line compiler, javac, 
+	you should assume the input file will reside in the same folder as your class file. This will not be the case in Eclipse.
+	If you wish to test it in Eclipse, you will need to add a command line argument to the project, and place your test file
+	in the project's base folder, as discussed in class.</p>
 </OL>
 <P><BR><BR><BR><BR><BR><BR><BR></P>
-<P><A HREF="http://www.cse.sc.edu/~carrollh/csce146/examples/ex4.txt"><U><B>Sample:</B></U></A></P>
+<P><A HREF="http://www.cse.sc.edu/~carrollh/csce146/examples/ex4.txt"><U><B>Sample Input:</B></U></A></P>
 <P>08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08<BR>49
 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00<BR>81 49 31
 73 55 79 14 29 93 71 40 67 53 88 30 03 49 13 36 65<BR>52 70 95 23 04
@@ -83,5 +89,6 @@ product of the four.
 01 74 31 49 71 48 86 81 16 23 57 05 54<BR>01 70 54 71 83 51 54 69 16
 92 33 48 61 43 52 01 89 19 67 48 
 </P>
+<img src="../img/ex4.jpg" alt="" />
 </BODY>
 </HTML>
