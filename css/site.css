@@ -16,7 +16,7 @@ body * {
 }
 
 #wrapper {
-	width: 670px; height: 710px;
+	width: 670px; height: 700px;
 	margin: 0 auto;
 	background-color: red;
 	position: relative;
@@ -69,10 +69,10 @@ body * {
 }
 
 #content {
-	width: 71%; height: 600px;
+	width: 71%; height: 593px;
 	background-color: black;
 	position: relative;
-	top: 92px;
+	top: 97px;
 	z-index: 0;
 }
 
