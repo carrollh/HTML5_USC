@@ -11,6 +11,15 @@
 	<META NAME="CHANGED" CONTENT="20130919;9432800">
 	<META NAME="DESCRIPTION" CONTENT="Project 5 details">
 	<STYLE TYPE="text/css">
+	body p{ 
+			margin: 0px;
+			padding: 0px;
+			border: 0px;
+	}
+	img { 
+			width: 300px; 
+			height: 320px;
+	}
 	<!--
 		H3.ctl { font-family: "Lohit Hindi" }
 	-->
@@ -18,44 +27,60 @@
 </HEAD>
 <BODY LANG="en-US" DIR="LTR">
 <H3 CLASS="western" ALIGN=CENTER><U>Project Five</U></H3>
-<P ALIGN=CENTER STYLE="margin-bottom: 0in">Due: Monday 10/2/2013 by
-midnight.<BR>Points: 30</P>
-<P STYLE="background: transparent"><U><B>Objective: </B></U>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in">Due: Thursday 10/3/2013 by
+midnight. - Points: 30</P>
+<P STYLE="background: transparent; margin-bottom: 0px"><U><B>Objectives: </B></U>
 </P>
 <OL>
 	<LI><P STYLE="margin-bottom: 0in">Become familiar with the use of
 	multidimensional arrays in Java.</P>
-	<LI><P>Develop familiarity with using OOP in Java.</P>
+	<LI><P STYLE="margin-bottom: 0in">Develop familiarity with using OOP in Java.</P>
 </OL>
-<P STYLE="margin-bottom: 0in"><BR>
-</P>
 <P><U><B>Description:</B></U><BR>Write a program that solves
 relatively simple Sudoku puzzles. Your implementation needs to
-consist of a Sudoku class.</P>
-<P><U><B>Input:<BR></B></U>Instead of using file IO, all data should be 
-obtained by the way of the stdin prompt in an interactive fashion. You 
-can then feed the data to your program from a file by using file 
-redirection. The input file will contain the initial Sudoku data with 0's 
+consist of a Sudoku class.</P><BR>
+<P><U><B>Input:<BR></B></U>Similar to Project 4, you should read be able
+to pass a text file path/name via command line to a program. The program 
+should then be able to read the data from the file by means of a Scanner 
+class instance. The input file will contain the initial Sudoku data with 0's 
 placed for the missing numbers. The data will be presented from the top 
-left of the table to bottom right.</P>
+left of the table to bottom right.</P><BR>
 <P><U><B>Output:</B></U></P>
 <P>The final results should be presented via the stdout in a matrix
-format (table format). 
-</P>
-<P><U><B>Requirements:</B></U></P>
-<UL>
-	<LI><P STYLE="margin-bottom: 0in">Your program should have a class
-	Sudoku with the following specifications:</P>
+format (table format) similar to the input file structure. 
+</P><BR>
+<P><U><B>Requirements:</B></U> Your program should have a class
+	Sudoku with the following specifications:</p>
 	<UL>
-		<LI><P STYLE="margin-bottom: 0in">Soon to come</P>
+		<LI><P STYLE="margin-bottom: 0in"><b>readData</b> method - This method should 
+		be able to read data from a passed in file, storing it in a 2D array.</P></LI>
+		<LI><P STYLE="margin-bottom: 0in"><b>printData</b> method - This method should 
+		be able to print the data stored in a 2D array to console in a format similar
+		to that of the input file.</P></LI>
+		<LI><P STYLE="margin-bottom: 0in"><b>checkHorizontal</b> method - This method should 
+		be able to step left-to-right across a 2D array, verifying that the numbers 1-9
+		appear exactly once each across that row. It may be a good idea to have this
+		method return a boolean value, depending on your implementation.</P></LI>
+		<LI><P STYLE="margin-bottom: 0in"><b>checkVertical</b> method - This method should 
+		be able to step top-to-bottom down a 2D array, verifying that the numbers 1-9
+		appear exactly once each in that column. It may be a good idea to have this
+		method return a boolean value, depending on your implementation.</P></LI>
+		<LI><P STYLE="margin-bottom: 0in"><b>checkSection</b> method - This method should 
+		be able to verify that the numbers 1-9 appear exactly once each within a 
+		specific 3x3 section of a 2D array. It may be a good idea to have this
+		method return a boolean value, depending on your implementation. You may also
+		wish to pass starting row and column index values into the method as parameters.</P></LI>
+		<LI><P STYLE="margin-bottom: 0in"><b>solve</b> method - This method should 
+		be able to solve a given sudoku puzzle. It should also verify its solution by
+		using the methods outlined above. It may help to reference 
+		<a href="http://en.wikipedia.org/wiki/Sudoku_solving_algorithms">Wikipedia</a> 
+		for help with this problem.</P></LI>
 	</UL>
-</UL>
-<P><BR><BR>
-</P>
+
 <P><U><B>Notes:<BR></B></U>Make sure that your program tests for
-convergence and does not get stuck in an infinite loop.</P>
+convergence and does not get stuck in an infinite loop.</P><BR>
 <P><U><B>Sample puzzles:</B></U></P>
-<P>Example1:<BR><A HREF="./files/Project5_input1.in">Sample input for
+<P>Example1: <A HREF="./files/Project5_input1.in">Sample input for
 the following problem.</A></P>
 <TABLE CELLPADDING=2 CELLSPACING=2>
 	<TR>
@@ -75,7 +100,7 @@ the following problem.</A></P>
 		</TD>
 	</TR>
 </TABLE>
-<P><BR>Example 2:<BR><A HREF="./files/Project5_input2.in">Sample
+<P><BR>Example 2: <A HREF="./files/Project5_input2.in">Sample
 input file for the follwoing problem.</A></P>
 <TABLE CELLPADDING=2 CELLSPACING=2>
 	<TR>
