@@ -1,128 +1,90 @@
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
-	<TITLE>Project Five</TITLE>
-	<META NAME="GENERATOR" CONTENT="LibreOffice 4.0.2.2 (Linux)">
-	<META NAME="AUTHOR" CONTENT="Homayoun Valafar">
-	<META NAME="CREATED" CONTENT="20070209;14565800">
-	<META NAME="CHANGEDBY" CONTENT="Homayoun Valafar">
-	<META NAME="CHANGED" CONTENT="20130919;9432800">
-	<META NAME="DESCRIPTION" CONTENT="Project 5 details">
-	<STYLE TYPE="text/css">
-	body p{ 
-			margin: 0px;
-			padding: 0px;
-			border: 0px;
-	}
-	img { 
-			width: 300px; 
-			height: 320px;
-	}
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0065)http://www.cse.sc.edu/~homayoun/CSCE146/Projects/Project_Six.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>Project Six</title>
+	<meta name="GENERATOR" content="LibreOffice 4.0.2.2 (Linux)">
+	<meta name="AUTHOR" content="Homayoun Valafar">
+	<meta name="CREATED" content="20070209;14565800">
+	<meta name="CHANGEDBY" content="Homayoun Valafar">
+	<meta name="CHANGED" content="20131015;9090600">
+	<meta name="DESCRIPTION" content="Project 6 details">
+	<meta name="CHANGEDBY" content="Homayoun Valafar">
+	<meta name="CHANGEDBY" content="Homayoun Valafar">
+	<meta name="CHANGEDBY" content="Homayoun Valafar">
+	<meta name="CHANGEDBY" content="Homayoun Valafar">
+	<meta name="CHANGEDBY" content="Homayoun Valafar">
+	<meta name="CHANGEDBY" content="Homayoun Valafar">
+	<style type="text/css">
 	<!--
 		H3.ctl { font-family: "Lohit Hindi" }
 	-->
-	</STYLE>
-</HEAD>
-<BODY LANG="en-US" DIR="LTR">
-<H3 CLASS="western" ALIGN=CENTER><U>Project Five</U></H3>
-<P ALIGN=CENTER STYLE="margin-bottom: 0in">Due: Thursday 10/3/2013 by
-midnight. - Points: 30</P>
-<P STYLE="background: transparent; margin-bottom: 0px"><U><B>Objectives: </B></U>
-</P>
-<OL>
-	<LI><P STYLE="margin-bottom: 0in">Become familiar with the use of
-	multidimensional arrays in Java.</P>
-	<LI><P STYLE="margin-bottom: 0in">Develop familiarity with using OOP in Java.</P>
-</OL>
-<P><U><B>Description:</B></U><BR>Write a program that solves
-relatively simple Sudoku puzzles. Your implementation needs to
-consist of a Sudoku class.</P><BR>
-<P><U><B>Input:<BR></B></U>Similar to Project 4, you should read be able
-to pass a text file path/name via command line to a program. The program 
-should then be able to read the data from the file by means of a Scanner 
-class instance. The input file will contain the initial Sudoku data with 0's 
-placed for the missing numbers. The data will be presented from the top 
-left of the table to bottom right.</P><BR>
-<P><U><B>Output:</B></U></P>
-<P>The final results should be presented via the stdout in a matrix
-format (table format) similar to the input file structure. 
-</P><BR>
-<P><U><B>Requirements:</B></U> Your program should have a class
-	Sudoku with the following specifications:</p>
-	<UL>
-		<LI><P STYLE="margin-bottom: 0in"><b>readData</b> method - This method should 
-		be able to read data from a passed in file, storing it in a 2D array.</P></LI>
-		<LI><P STYLE="margin-bottom: 0in"><b>printData</b> method - This method should 
-		be able to print the data stored in a 2D array to console in a format similar
-		to that of the input file.</P></LI>
-		<LI><P STYLE="margin-bottom: 0in"><b>checkHorizontal</b> method - This method should 
-		be able to step left-to-right across a 2D array, verifying that the numbers 1-9
-		appear exactly once each across that row. It may be a good idea to have this
-		method return a boolean value, depending on your implementation.</P></LI>
-		<LI><P STYLE="margin-bottom: 0in"><b>checkVertical</b> method - This method should 
-		be able to step top-to-bottom down a 2D array, verifying that the numbers 1-9
-		appear exactly once each in that column. It may be a good idea to have this
-		method return a boolean value, depending on your implementation.</P></LI>
-		<LI><P STYLE="margin-bottom: 0in"><b>checkSection</b> method - This method should 
-		be able to verify that the numbers 1-9 appear exactly once each within a 
-		specific 3x3 section of a 2D array. It may be a good idea to have this
-		method return a boolean value, depending on your implementation. You may also
-		wish to pass starting row and column index values into the method as parameters.</P></LI>
-		<LI><P STYLE="margin-bottom: 0in"><b>solve</b> method - This method should 
-		be able to solve a given sudoku puzzle. It should also verify its solution by
-		using the methods outlined above. It may help to reference 
-		<a href="http://en.wikipedia.org/wiki/Sudoku_solving_algorithms">Wikipedia</a> 
-		for help with this problem.</P></LI>
-	</UL>
+	</style>
+</head>
+<body lang="en-US" dir="LTR">
+<h3 class="western" align="CENTER"><u>Project Six</u></h3>
+<p align="CENTER" style="margin-bottom: 0in">Due: Wednesday 10/23/2013 @
+11:55<br>Points: 30</p>
+<p style="background: transparent"><u><b>Objective: </b></u>
+</p>
+<ol>
+	<li><p style="margin-bottom: 0in">Become familiar with the dynamic
+	allocation of array storage</p>
+	</li><li><p style="margin-bottom: 0in">Become familiar with java.util.ArrayList</p>
+</li></ol>
+<p><u><b>Description:</b></u><br>Create your ListArray class
+that is functionally similar to the formal Java ArrayList Utility class.</p>
+<p><u><b>Requirements:</b></u></p>
+<p style="margin-bottom: 0in">Your ListArray should contain the
+following methods and characteristics: 
+</p>
+<ul>
+	<ul>
+		<li><p style="margin-bottom: 0in">Should contain a default (no-args)
+		constructor <font face="Courier New, monospace">ListArray()</font></p>
+		</li><li><p style="margin-bottom: 0in">Should contain an alternative (overloaded)
+		constructor <font face="Courier New, monospace">ListArray(short[]
+		anArray)</font> that allows the user to create an initial ListArray
+		that is equivalent to an array that is passed to the constructor</p>
+		</li><li><p style="margin-bottom: 0in">Should contain a copy-constructor 
+		<font face="Courier New, monospace">ListArray(ListArray
+		anExample)</font> that will create an ListArray identical to one
+		that is passed to it</p>
+		</li><li><p style="margin-bottom: 0in">Should contain a <font face="Courier New, monospace">void
+		add(short </font><font face="Courier New, monospace">value</font><font face="Courier New, monospace">)</font>
+		method</p>
+		</li><li><p style="margin-bottom: 0in">Should contain a <font face="Courier New, monospace">void
+		add(int index, short </font><font face="Courier New, monospace">value</font><font face="Courier New, monospace">)</font>
+		method</p>
+		</li><li><p style="margin-bottom: 0in">Should contain a <font face="Courier New, monospace">short
+		remove(int index)</font> method</p>
+		</li><li><p style="margin-bottom: 0in">Should contain <font face="Courier New, monospace">boolean
+		contains(short </font><font face="Courier New, monospace">value</font><font face="Courier New, monospace">)</font>
+		method</p>
+		</li><li><p style="margin-bottom: 0in">Should contain a <font face="Courier New, monospace">short
+		get(int index)</font> method</p>
+		</li><li><p style="margin-bottom: 0in">Should contain an <font face="Courier New, monospace">int
+		indexOf(short </font><font face="Courier New, monospace">value</font><font face="Courier New, monospace">)</font>
+		method</p>
+		</li><li><p style="margin-bottom: 0in">Should contain an <font face="Courier New, monospace">boolean
+		isEmpty()</font> method</p>
+		</li><li><p style="margin-bottom: 0in">Should contain a <font face="Courier New, monospace">int
+		size()</font> method</p>
+		</li><li><p style="margin-bottom: 0in">Should override the <font face="Courier New, monospace">public String 
+		toString()</font> method inherited from the java.util.AbstractCollection class.
+	</li><li><p style="margin-bottom: 0in">Should override the <font face="Courier New, monospace">public boolean 
+	equals(Object o)</font> method inherited from the java.util.List class.
+	</li></ul>
+</ul>
+<p><u><b>Notes:<br></b></u><span style="text-decoration: none"><span style="font-weight: normal">For
+detailed description of each of the above methods, refer to the
+original Java documentation on java.util.ArrayList. </span></span>
+</p>
 
-<P><U><B>Notes:<BR></B></U>Make sure that your program tests for
-convergence and does not get stuck in an infinite loop.</P><BR>
-<P><U><B>Sample puzzles:</B></U></P>
-<P>Example1: <A HREF="http://www.cse.sc.edu/~carrollh/csce146/files/Project5_input1.in">Sample input for
-the following problem.</A></P>
-<TABLE CELLPADDING=2 CELLSPACING=2>
-	<TR>
-		<TD STYLE="border-top: 1px double #808080; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: none; padding-top: 0.02in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0in">
-			<P ALIGN=CENTER>Input</P>
-		</TD>
-		<TD STYLE="border: 1px double #808080; padding: 0.02in">
-			<P ALIGN=CENTER>Output</P>
-		</TD>
-	</TR>
-	<TR>
-		<TD STYLE="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: none; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0in">
-			<P ALIGN=CENTER><IMG SRC="./pics/Sudoku1.png" NAME="graphics1" ALIGN=BOTTOM WIDTH=486 HEIGHT=532 BORDER=0></P>
-		</TD>
-		<TD STYLE="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in">
-			<P ALIGN=CENTER><IMG SRC="./pics/Sudoku1.solution.png" NAME="graphics2" ALIGN=BOTTOM WIDTH=486 HEIGHT=532 BORDER=0></P>
-		</TD>
-	</TR>
-</TABLE>
-<P><BR>Example 2: <A HREF="http://www.cse.sc.edu/~carrollh/csce146/files/Project5_input2.in">Sample
-input file for the follwoing problem.</A></P>
-<TABLE CELLPADDING=2 CELLSPACING=2>
-	<TR>
-		<TD STYLE="border-top: 1px double #808080; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: none; padding-top: 0.02in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0in">
-			<P ALIGN=CENTER>Input</P>
-		</TD>
-		<TD STYLE="border: 1px double #808080; padding: 0.02in">
-			<P ALIGN=CENTER>Output</P>
-		</TD>
-	</TR>
-	<TR>
-		<TD STYLE="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: none; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0in">
-			<P ALIGN=CENTER><IMG SRC="./pics/Sudoku2.png" NAME="graphics3" ALIGN=BOTTOM WIDTH=486 HEIGHT=532 BORDER=0></P>
-		</TD>
-		<TD STYLE="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in">
-			<P ALIGN=CENTER><IMG SRC="./pics/Sudoku2.solution.png" NAME="graphics4" ALIGN=BOTTOM WIDTH=486 HEIGHT=532 BORDER=0></P>
-		</TD>
-	</TR>
-</TABLE>
-<P><BR><BR>
-</P>
-<P><BR><BR>
-</P>
-</BODY>
-</HTML>
+<p><u><b>Example main:<br></b></u><img width="500px" src="http://www.cse.sc.edu/~carrollh/csce146/pics/Project6ExampleMain.png" alt="example main" /></p>
+<p><u><b>Example output:<br></b></u><img width="300px" src="http://www.cse.sc.edu/~carrollh/csce146/pics/Project6ExampleOutput.png" alt="example output" /></p>
+
+<p><u><b>Grading guidelines:</b></u></p>
+<p style="font-weight: normal; text-decoration: none"><a href="http://www.cse.sc.edu/~carrollh/csce146/files/GeneralRubric.pdf">Click here to view the Rubric</a></p>
+
+</body></html>
