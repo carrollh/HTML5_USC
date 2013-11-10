@@ -2,19 +2,7 @@
 <!-- saved from url=(0065)http://www.cse.sc.edu/~homayoun/CSCE146/Projects/Project_Six.html -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	
-	<title>Project Six</title>
-	<meta name="GENERATOR" content="LibreOffice 4.0.2.2 (Linux)">
-	<meta name="AUTHOR" content="Homayoun Valafar">
-	<meta name="CREATED" content="20070209;14565800">
-	<meta name="CHANGEDBY" content="Homayoun Valafar">
-	<meta name="CHANGED" content="20131015;9090600">
-	<meta name="DESCRIPTION" content="Project 6 details">
-	<meta name="CHANGEDBY" content="Homayoun Valafar">
-	<meta name="CHANGEDBY" content="Homayoun Valafar">
-	<meta name="CHANGEDBY" content="Homayoun Valafar">
-	<meta name="CHANGEDBY" content="Homayoun Valafar">
-	<meta name="CHANGEDBY" content="Homayoun Valafar">
-	<meta name="CHANGEDBY" content="Homayoun Valafar">
+	<title>Project Seven</title>
 	<style type="text/css">
 	<!--
 		H3.ctl { font-family: "Lohit Hindi" }
@@ -22,49 +10,41 @@
 	</style>
 </head>
 <body lang="en-US" dir="LTR">
-<h3 class="western" align="CENTER"><u>Project Six</u></h3>
-<p align="CENTER" style="margin-bottom: 0in">Due: Wednesday 10/23/2013 @
-11:55<br>Points: 30</p>
+<h3 class="western" align="CENTER"><u>Project Seven</u></h3>
+<p align="CENTER" style="margin-bottom: 0in">Due: Thursday 11/14/2013 @
+11:55<br></p>
 <p style="background: transparent"><u><b>Objective: </b></u>
 </p>
 <ol>
-	<li><p style="margin-bottom: 0in">Become familiar with the dynamic
-	allocation of array storage</p>
-	</li><li><p style="margin-bottom: 0in">Become familiar with java.util.ArrayList</p>
-</li></ol>
-<p><u><b>Description:</b></u><br>Create your ListArray class
-that is functionally similar to the formal Java ArrayList Utility class.</p>
+	<li><p style="margin-bottom: 0in">Become familiar with the Linked List Data Structures.</p>
+	</li></ol>
+<p><u><b>Description:</b></u><br>Create a Doubly Linked List class as discussed in class.</p>
 <p><u><b>Requirements:</b></u></p>
-<p style="margin-bottom: 0in">Your ListArray should contain the
+<p style="margin-bottom: 0in">Your DLList should contain the
 following methods and characteristics: 
 </p>
 <ul>
 	<ul>
-		<li><p style="margin-bottom: 0in">Should contain a default (no-args)
-		constructor <font face="Courier New, monospace">ListArray()</font></p>
-		</li><li><p style="margin-bottom: 0in">Should contain an alternative (overloaded)
-		constructor <font face="Courier New, monospace">ListArray(short[]
-		anArray)</font> that allows the user to create an initial ListArray
-		that is equivalent to an array that is passed to the constructor</p>
-		</li><li><p style="margin-bottom: 0in">Should contain a copy-constructor 
-		<font face="Courier New, monospace">ListArray(ListArray
-		anExample)</font> that will create an ListArray identical to one
-		that is passed to it</p>
+		<li><p style="margin-bottom: 0in"> You should define a private inner class
+		<font face="Courier New, monospace">DLLNode</font>. It should have 2 DLLNode members
+		for 'next' and 'previous' nodes, as well as an Object member variable for data.</p>
+		</li><li><p style="margin-bottom: 0in"> DLList Should contain a default (no-args)
+		constructor <font face="Courier New, monospace">DLList()</font></p>
 		</li><li><p style="margin-bottom: 0in">Should contain a <font face="Courier New, monospace">void
-		add(short </font><font face="Courier New, monospace">value</font><font face="Courier New, monospace">)</font>
+		add(Object </font><font face="Courier New, monospace">o</font><font face="Courier New, monospace">)</font>
 		method</p>
 		</li><li><p style="margin-bottom: 0in">Should contain a <font face="Courier New, monospace">void
-		add(int index, short </font><font face="Courier New, monospace">value</font><font face="Courier New, monospace">)</font>
+		add(int index, Object </font><font face="Courier New, monospace">o</font><font face="Courier New, monospace">)</font>
 		method</p>
-		</li><li><p style="margin-bottom: 0in">Should contain a <font face="Courier New, monospace">short
+		</li><li><p style="margin-bottom: 0in">Should contain an <font face="Courier New, monospace">Object
 		remove(int index)</font> method</p>
 		</li><li><p style="margin-bottom: 0in">Should contain <font face="Courier New, monospace">boolean
-		contains(short </font><font face="Courier New, monospace">value</font><font face="Courier New, monospace">)</font>
+		contains(Object </font><font face="Courier New, monospace">o</font><font face="Courier New, monospace">)</font>
 		method</p>
-		</li><li><p style="margin-bottom: 0in">Should contain a <font face="Courier New, monospace">short
+		</li><li><p style="margin-bottom: 0in">Should contain an <font face="Courier New, monospace">Object
 		get(int index)</font> method</p>
 		</li><li><p style="margin-bottom: 0in">Should contain an <font face="Courier New, monospace">int
-		indexOf(short </font><font face="Courier New, monospace">value</font><font face="Courier New, monospace">)</font>
+		indexOf(Object </font><font face="Courier New, monospace">o</font><font face="Courier New, monospace">)</font>
 		method</p>
 		</li><li><p style="margin-bottom: 0in">Should contain an <font face="Courier New, monospace">boolean
 		isEmpty()</font> method</p>
@@ -76,13 +56,17 @@ following methods and characteristics:
 	equals(Object o)</font> method inherited from the java.util.List class.
 	</li></ul>
 </ul>
-<p><u><b>Notes:<br></b></u><span style="text-decoration: none"><span style="font-weight: normal">For
-detailed description of each of the above methods, refer to the
-original Java documentation on java.util.ArrayList. </span></span>
+<p><u><b>Notes:<br></b></u><span style="text-decoration: none"><span style="font-weight: normal">For a detailed description 
+of each of the above methods, refer to the original Java documentation on java.util.LinkedList. You should refer to SLList 
+example on the course homepage for additional guidance. Also, feel free to add any private helper methods you need to help 
+you get the job done.</span></span>
 </p>
 
-<p><u><b>Example main:<br></b></u><img width="500px" src="http://www.cse.sc.edu/~carrollh/csce146/pics/Project6ExampleMain.png" alt="example main" /></p>
-<p><u><b>Example output:<br></b></u><img width="300px" src="http://www.cse.sc.edu/~carrollh/csce146/pics/Project6ExampleOutput.png" alt="example output" /></p>
+<p><u><b>I am not providing you with a main method. I will be providing the TA's with a .main method after the due date is passed. You should test your code 
+appropriately to ensure proper operation. In other words you need to come up with a "test driver" on your own. The primary reason for 
+this is because you will need to do the same for your Final Project, so I want you to get practice. DO NOT INCLUDE A MAIN METHOD. Your 
+submission should be a single class file (DLLiist.java) that contains a private nested class (DLLNode) as well. Do not put a 
+main method in your file!</b></u></p>
 
 <p><u><b>Grading guidelines:</b></u></p>
 <p style="font-weight: normal; text-decoration: none"><a href="http://www.cse.sc.edu/~carrollh/csce146/files/GeneralRubric.pdf">Click here to view the Rubric</a></p>
