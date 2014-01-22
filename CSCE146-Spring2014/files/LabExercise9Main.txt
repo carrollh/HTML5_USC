@@ -1,0 +1,18 @@
+public static void main(String[] args) {
+		MyArrayList list = new MyArrayList();
+		
+		Scanner kb = new Scanner(System.in);
+		
+		String input = "";
+		while(!"exit".equals(input = kb.next())) {
+			if(input.matches("\\d+")) list.add(Integer.parseInt(input));
+			else if(input.matches("\\d+\\.\\d+")) list.add(Double.parseDouble(input));
+			else if(input.matches("true") || input.matches("false")) list.add(Boolean.parseBoolean(input));
+			else list.add(input);
+		}
+		
+		System.out.println("Minimum int: " + list.minimumInt());
+		System.out.println("Average double: " + list.averageDouble());
+		System.out.println("Number of trues: " + list.numberOfTrues());
+		System.out.println("Number of Strings: " + list.numberOfStrings());
+	}
